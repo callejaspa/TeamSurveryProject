@@ -11,7 +11,6 @@ import { AngularFireStorageModule } from 'angularfire2/storage';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-
 import {
   MatAutocompleteModule,
   MatButtonModule,
@@ -37,7 +36,8 @@ import {
   MatToolbarModule,
   MatTooltipModule
 } from '@angular/material';
-
+import { HomeComponent } from './+home/home.component';
+import { SurveyComponent } from './+survey/survey.component';
 
 export const MaterialModules = [
   MatAutocompleteModule,
@@ -68,7 +68,10 @@ export const MaterialModules = [
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    SurveyComponent,
+
   ],
   imports: [
     BrowserModule,
