@@ -38,6 +38,7 @@ import {
 } from '@angular/material';
 import { HomeComponent } from './+home/home.component';
 import { SurveyComponent } from './+survey/survey.component';
+import { SubmitComponent } from './+submit/submit.component';
 
 export const MaterialModules = [
   MatAutocompleteModule,
@@ -71,6 +72,7 @@ export const MaterialModules = [
     AppComponent,
     HomeComponent,
     SurveyComponent,
+    SubmitComponent,
 
   ],
   imports: [

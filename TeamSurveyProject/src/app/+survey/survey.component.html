@@ -1,25 +1,158 @@
 <h2>Team Evaluation Survey</h2>
+<label for="teammate">Teammate's Name: *</label>
+<br>
+<input type="text" placeholder="Teammate's Name">
+<br>
+<label for="totalMem">Total Team Members: *</label>
+<br>
+<input type="text" placeholder="Total number team members">
+<br>
+
+<table class="rubric">
+  <tr>
+    <th> </th>
+    <th>5</th>
+    <th>4</th>
+    <th>3</th>
+    <th>2</th>
+    <th>1</th>
+  </tr>
+  <tr>
+    <th>Team Meeting Contributions</th>
+    <td>Contributions have exceptional positive impact.</td>
+    <td>Contributions have meaningful positive impact. </td>
+    <td>Contributions have modest positive impact. </td>
+    <td>Contributions have minimal positive impact. </td>
+    <td>No contributions or actively detracts from team meetings. </td>
+  </tr>
+  <tr>
+    <th>Team Building</th>
+    <td>Actively engages all (or nearly all) team members in ways that facilitate their contributions
+    </td>
+    <td>Actively engages some team members in ways that facilitate their contributions
+    </td>
+    <td>Attempts to facilitate the contributions of one or more team members but with little/no success</td>
+    <td>Listens to team members’ inputs, but does not try to facilitate further discussions
+    </td>
+    <td>Actively marginalizes or ignores one or more team members’ contributions.
+    </td>
+  </tr>
+  <tr>
+    <th>Work Ethic</th>
+    <td>Goes above and beyond the call. Completes own work in superior manner while assisting team in completing other tasks</td>
+    <td>Completes task assignments in superior manner
+    </td>
+    <td>Completes task assignments in an adequate manner</td>
+    <td>Completes task assignments in a perfunctory manner.</td>
+    <td>Does not complete task assignments.</td>
+  </tr>
+  <tr>
+    <th>Fosters Constructive Team Climate</th>
+    <td>Treats team members respectfully and successfully fosters team climate by saying or doing things which make others feel
+      valued in the group
+    </td>
+    <td>Treats team members respectfully and attempts to say or do things which make others feel valued in the group
+    </td>
+    <td>Treats team members respectfully.
+    </td>
+    <td>Treats team members impersonally.
+    </td>
+    <td> Treats team members poorly or with outright disrespect.
+    </td>
+  </tr>
+  <tr>
+    <th>Response to Conflict</th>
+    <td>Addresses conflict directly and constructively, helping to resolve it in a way that strengthens overall team cohesiveness
+      and future effectiveness
+    </td>
+    <td>Addresses conflict directly in a manner that allows the group to work productively on immediate tasks, but without resolving
+      basic sources of conflict.
+    </td>
+    <td>Avoids dealing with conflict directly by redirecting focus or engaging the team in tasks.</td>
+    <td>Attempts to suppress conflict in the group; tries to superficially “smooth over” or minimize the appearance of conflict
+    </td>
+    <td>Actively incites conflict or deliberately sabotages attempts to resolve conflicts.</td>
+  </tr>
+</table>
+
 
 <p>
-1. Using the Teamwork Rubric, give your teammate a 1-5 score in
-each of the following categories:
-<br> a. Meeting Contributions: 
-<br> b. Team Building:
-<br> c. Work Ethic:
-<br> d. Fosters Constructions Team Climate:
-<br> e. Response to Conflict:
-<br> f. If you gave your teammate a score of 1 (lowest score) in any
-category, please write a brief (2-3 sentence) explanation why. Include
-specific incidents or examples if possible.
+  1. Using the Teamwork Rubric, give your teammate a 1-5 score in each of the following categories:
+  <br> a. Meeting Contributions:
+  <input type="radio" id="choice1a" name="choiceA" value="1a">
+  <label for="choice1a">1</label>
+  <input type="radio" id="choice2a" name="choiceA" value="2a">
+  <label for="choice2a">2</label>
+  <input type="radio" id="choice3a" name="choiceA" value="3a">
+  <label for="choice3a">3</label>
+  <input type="radio" id="choice4a" name="choiceA" value="4a">
+  <label for="choice4a">4</label>
+  <input type="radio" id="choice5a" name="choiceA" value="5a">
+  <label for="choice3a">5</label>
+  <br> b. Team Building:
+  <input type="radio" id="choice1b" name="choiceB" value="1b">
+  <label for="choice1b">1</label>
+  <input type="radio" id="choice2b" name="choiceB" value="2b">
+  <label for="choice2b">2</label>
+  <input type="radio" id="choice3b" name="choiceB" value="3b">
+  <label for="choice3b">3</label>
+  <input type="radio" id="choice4b" name="choiceB" value="4b">
+  <label for="choice4b">4</label>
+  <input type="radio" id="choice5b" name="choiceB" value="5b">
+  <label for="choice3b">5</label>
+  <br> c. Work Ethic:
+  <input type="radio" id="choice1c" name="choiceC" value="1c">
+  <label for="choice1c">1</label>
+  <input type="radio" id="choice2c" name="choiceC" value="2c">
+  <label for="choice2c">2</label>
+  <input type="radio" id="choice3c" name="choiceC" value="3c">
+  <label for="choice3c">3</label>
+  <input type="radio" id="choice4c" name="choiceC" value="4c">
+  <label for="choice4c">4</label>
+  <input type="radio" id="choice5c" name="choiceC" value="5c">
+  <label for="choice3c">5</label>
+  <br> d. Fosters Constructions Team Climate:
+  <input type="radio" id="choice1d" name="choiceD" value="1d">
+  <label for="choice1d">1</label>
+  <input type="radio" id="choice2d" name="choiceD" value="2d">
+  <label for="choice2d">2</label>
+  <input type="radio" id="choice3d" name="choiceD" value="3d">
+  <label for="choice3d">3</label>
+  <input type="radio" id="choice4d" name="choiceD" value="4d">
+  <label for="choice4d">4</label>
+  <input type="radio" id="choice5d" name="choiceD" value="5d">
+  <label for="choice5d">5</label>
+  <br> e. Response to Conflict:
+  <input type="radio" id="choice1" name="choiceE" value="1e">
+  <label for="choice1">1</label>
+  <input type="radio" id="choice2" name="choiceE" value="2e">
+  <label for="choice2">2</label>
+  <input type="radio" id="choice3" name="choiceE" value="3e">
+  <label for="choice3">3</label>
+  <input type="radio" id="choice4" name="choiceE" value="4e">
+  <label for="choice4">4</label>
+  <input type="radio" id="choice5" name="choiceE" value="5e">
+  <label for="choice3">5</label>
+  <br> f. If you gave your teammate a score of 1 (lowest score) in any category, please write a brief (2-3 sentence) explanation
+  why. Include specific incidents or examples if possible.
 </p>
+<textarea name="Text1" cols="40" rows="5"></textarea>
+
 
 <p>
-2. Please write a brief (3-4 sentences) evaluation of your teammate. Include
-what they did well and what they need to work on.
+  2. Please write a brief (3-4 sentences) evaluation of your teammate. Include what they did well and what they need to work
+  on.
 </p>
+<textarea name="Text2" cols="40" rows="5"></textarea>
 
-
-<p> 
-3. What percentage of the total work do you estimate your teammate did? (Keep in 
-mind that this implies your entire team's percentages should sum to 100%.
+<p>
+  3. What percentage of the total work do you estimate your teammate did? (Keep in mind that this implies your entire team's
+  percentages should sum to 100%.
 </p>
+<div class="percent">
+  <input type="text" placeholder="Percentage">
+</div>
+
+<br>
+
+<button type="button" [routerLink]="['/submit']"> Submit </button>
