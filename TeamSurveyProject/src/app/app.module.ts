@@ -14,7 +14,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HomeComponent } from './+home/home.component';
-
+import { SurveyComponent } from './+survey/survey.component';
+import { SigninComponent } from './+signin/signin.component';
 
 import {
   MatAutocompleteModule,
@@ -72,7 +73,9 @@ export const MaterialModules = [
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent
+    HomeComponent,
+    SurveyComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,

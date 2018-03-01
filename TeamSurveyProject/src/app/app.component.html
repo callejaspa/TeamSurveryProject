@@ -1,15 +1,23 @@
-<h1>Add a new password</h1>
-<form #passwordForm="ngForm" fxLayout="column" (ngSubmit)="onSubmit()">
-  <mat-input-container>
-    <input matInput required placeholder="First Name" name="firstName" [(ngModel)]="dummyData.FirstName">
-  </mat-input-container>
-  <mat-input-container>
-    <input matInput required placeholder="Last Name" name="lastName" [(ngModel)]="dummyData.LastName">
-  </mat-input-container>
-  <!-- <mat-input-container>
-    <input matInput required placeholder="Password" name="password" [(ngModel)]="formPassword.password">
-  </mat-input-container> -->
-  <br><br>
-  <button mat-button type='button' (click)="clearForm()">Cancel</button>
-  <button mat-button [disabled]="!passwordForm.form.valid" type='submit'>Save</button>
-</form>
+<mat-toolbar color="primary">
+    Rose Routing
+    <span fxFlex></span>
+    <a mat-button [routerLink]="['/home']" routerLinkActive="active">
+      <mat-icon>home</mat-icon>
+    </a>
+    <a id="moench-btn" mat-button [matMenuTriggerFor]="moenchMenu">Moench</a>
+  
+    <mat-menu [overlapTrigger]="false" #moenchMenu="matMenu">
+      <button mat-menu-item [routerLink]="['/moench', '200']" routerLinkActive="active">200</button>
+      <button mat-menu-item [routerLink]="['/moench', '100']" routerLinkActive="active">100</button>
+      <button mat-menu-item [routerLink]="['/moench', 'L100']" routerLinkActive="active">L100</button>
+      <button mat-menu-item [routerLink]="['/moench', 'L200']" routerLinkActive="active">L200</button>
+    </mat-menu>
+  
+    <a mat-button [routerLink]="['/signin']" routerLinkActive="active">Sign In</a>
+  </mat-toolbar>
+  
+  <div fxLayoutAlign="center center">
+    <mat-card class="container">
+      <router-outlet></router-outlet>
+    </mat-card>
+  </div>
