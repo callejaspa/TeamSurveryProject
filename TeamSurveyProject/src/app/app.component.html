@@ -1,23 +1,16 @@
 <mat-toolbar color="primary">
-    Rose Routing
-    <span fxFlex></span>
-    <a mat-button [routerLink]="['/home']" routerLinkActive="active">
-      <mat-icon>home</mat-icon>
-    </a>
-    <a id="moench-btn" mat-button [matMenuTriggerFor]="moenchMenu">Moench</a>
-  
-    <mat-menu [overlapTrigger]="false" #moenchMenu="matMenu">
-      <button mat-menu-item [routerLink]="['/moench', '200']" routerLinkActive="active">200</button>
-      <button mat-menu-item [routerLink]="['/moench', '100']" routerLinkActive="active">100</button>
-      <button mat-menu-item [routerLink]="['/moench', 'L100']" routerLinkActive="active">L100</button>
-      <button mat-menu-item [routerLink]="['/moench', 'L200']" routerLinkActive="active">L200</button>
-    </mat-menu>
-  
-    <a mat-button [routerLink]="['/signin']" routerLinkActive="active">Sign In</a>
-  </mat-toolbar>
-  
-  <div fxLayoutAlign="center center">
-    <mat-card class="container">
-      <router-outlet></router-outlet>
-    </mat-card>
+  Password Keeper
+  <span fxFlex></span>
+
+  <button *ngIf="showSignOut" mat-icon-button [matMenuTriggerFor]="signOutMenu">
+    <mat-icon>more_vert</mat-icon>
+  </button>
+  <mat-menu [overlapTrigger]="false" #signOutMenu="matMenu">
+    <button mat-menu-item (click)="signOut()">Sign Out</button>
+  </mat-menu>
+</mat-toolbar>
+<div fxLayoutAlign="center center">
+  <div class="container" fxFlex fxFlex.md="960px" fxFlex.gt-md="1100px">
+    <router-outlet></router-outlet>
   </div>
+</div>
