@@ -75,7 +75,7 @@ export const MaterialModules = [
     AppComponent,
     HomeComponent,
     SurveyComponent,
-    SigninComponent
+    SigninComponent,
   ],
   imports: [
     BrowserModule,

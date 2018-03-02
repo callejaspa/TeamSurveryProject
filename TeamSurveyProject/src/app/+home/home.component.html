@@ -13,3 +13,7 @@
   <button mat-button type='button' (click)="clearForm()">Cancel</button>
   <button mat-button [disabled]="!passwordForm.form.valid" type='submit'>Save</button>
 </form>
+
+<h1>Welcome to Team Evaluations!</h1>
+<button type="button" [routerLink]="['/home']"> Home </button>
+<button type="button" [routerLink]="['/survey']"> Survey </button>
