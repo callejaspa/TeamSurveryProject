@@ -1,9 +1,5 @@
 {
   "projects": {
-<<<<<<< HEAD
-    "default": "setupproject-default"
-=======
     "default": "team-survey-7f507"
->>>>>>> 327a78a32e4688c88e786be2866d954704723bc0
   }
 }
