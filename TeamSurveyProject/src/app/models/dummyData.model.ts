@@ -1,4 +1,5 @@
 export class DummyData {
+    public $key: string;
     public FirstName: string;
     public LastName: string;
 
@@ -13,6 +14,16 @@ export class DummyData {
             FirstName: this.FirstName,
             LastName: this.LastName
         }
+    }
+
+    public getKey = (): string => {
+        return this.$key;
+    }
+
+    public clear = (): void => {
+        this.$key = undefined;
+        this.FirstName = undefined;
+        this.LastName = undefined;
     }
 }
 
