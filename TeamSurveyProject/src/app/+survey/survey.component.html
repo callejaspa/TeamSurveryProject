@@ -1,12 +1,99 @@
 <h2>Team Evaluation Survey</h2>
+<form #passwordForm="ngForm" fxLayout="column" (ngSubmit)="onSubmit()">
 <label for="teammate">Teammate's Name: *</label>
 <br>
-<input type="text" placeholder="Teammate's Name">
+<mat-input-container>
+  <input matInput required placeholder="Teammate's Name" name="name" [(ngModel)]="dummyData.Name">
+</mat-input-container>
 <br>
 <label for="totalMem">Total Team Members: *</label>
 <br>
-<input type="text" placeholder="Total number team members">
+<mat-input-container>
+  <input matInput required placeholder="Number of Teammates" name="number" [(ngModel)]="dummyData.Number">
+</mat-input-container>
 <br>
+<p>
+  1. Using the Teamwork Rubric, give your teammate a 1-5 score in each of the following categories:
+  <br> a. Meeting Contributions:
+  <input type="radio" id="choice1a" name="choiceA" value="1" [(ngModel)]="dummyData.Survey.Question1A" required>
+  <label for="choice1a">1</label>
+  <input type="radio" id="choice2a" name="choiceA" value="2" [(ngModel)]="dummyData.Survey.Question1A" required>
+  <label for="choice2a">2</label>
+  <input type="radio" id="choice3a" name="choiceA" value="3" [(ngModel)]="dummyData.Survey.Question1A" required>
+  <label for="choice3a">3</label>
+  <input type="radio" id="choice4a" name="choiceA" value="4" [(ngModel)]="dummyData.Survey.Question1A" required>
+  <label for="choice4a">4</label>
+  <input type="radio" id="choice5a" name="choiceA" value="5" [(ngModel)]="dummyData.Survey.Question1A" required>
+  <label for="choice3a">5</label>
+  <br> b. Team Building:
+  <input type="radio" id="choice1b" name="choiceB" value="1" [(ngModel)]="dummyData.Survey.Question1B" required>
+  <label for="choice1b">1</label>
+  <input type="radio" id="choice2b" name="choiceB" value="2" [(ngModel)]="dummyData.Survey.Question1B" required>
+  <label for="choice2b">2</label>
+  <input type="radio" id="choice3b" name="choiceB" value="3" [(ngModel)]="dummyData.Survey.Question1B" required>
+  <label for="choice3b">3</label>
+  <input type="radio" id="choice4b" name="choiceB" value="4" [(ngModel)]="dummyData.Survey.Question1B" required>
+  <label for="choice4b">4</label>
+  <input type="radio" id="choice5b" name="choiceB" value="5" [(ngModel)]="dummyData.Survey.Question1B" required>
+  <label for="choice3b">5</label>
+  <br> c. Work Ethic:
+  <input type="radio" id="choice1c" name="choiceC" value="1" [(ngModel)]="dummyData.Survey.Question1C" required>
+  <label for="choice1c">1</label>
+  <input type="radio" id="choice2c" name="choiceC" value="2" [(ngModel)]="dummyData.Survey.Question1C" required>
+  <label for="choice2c">2</label>
+  <input type="radio" id="choice3c" name="choiceC" value="3" [(ngModel)]="dummyData.Survey.Question1C" required>
+  <label for="choice3c">3</label>
+  <input type="radio" id="choice4c" name="choiceC" value="4" [(ngModel)]="dummyData.Survey.Question1C" required>
+  <label for="choice4c">4</label>
+  <input type="radio" id="choice5c" name="choiceC" value="5" [(ngModel)]="dummyData.Survey.Question1C" required>
+  <label for="choice3c">5</label>
+  <br> d. Fosters Constructions Team Climate:
+  <input type="radio" id="choice1d" name="choiceD" value="1" [(ngModel)]="dummyData.Survey.Question1D" required>
+  <label for="choice1d">1</label>
+  <input type="radio" id="choice2d" name="choiceD" value="2" [(ngModel)]="dummyData.Survey.Question1D" required>
+  <label for="choice2d">2</label>
+  <input type="radio" id="choice3d" name="choiceD" value="3" [(ngModel)]="dummyData.Survey.Question1D" required>
+  <label for="choice3d">3</label>
+  <input type="radio" id="choice4d" name="choiceD" value="4" [(ngModel)]="dummyData.Survey.Question1D" required>
+  <label for="choice4d">4</label>
+  <input type="radio" id="choice5d" name="choiceD" value="5" [(ngModel)]="dummyData.Survey.Question1D" required>
+  <label for="choice5d">5</label>
+  <br> e. Response to Conflict:
+  <input type="radio" id="choice1" name="choiceE" value="1" [(ngModel)]="dummyData.Survey.Question1E" required>
+  <label for="choice1">1</label>
+  <input type="radio" id="choice2" name="choiceE" value="2" [(ngModel)]="dummyData.Survey.Question1E" required>
+  <label for="choice2">2</label>
+  <input type="radio" id="choice3" name="choiceE" value="3" [(ngModel)]="dummyData.Survey.Question1E" required>
+  <label for="choice3">3</label>
+  <input type="radio" id="choice4" name="choiceE" value="4" [(ngModel)]="dummyData.Survey.Question1E" required>
+  <label for="choice4">4</label>
+  <input type="radio" id="choice5" name="choiceE" value="5" [(ngModel)]="dummyData.Survey.Question1E" required>
+  <label for="choice3">5</label>
+  <br> f. If you gave your teammate a score of 1 (lowest score) in any category, please write a brief (2-3 sentence) explanation
+  why. Include specific incidents or examples if possible.
+</p>
+<textarea name="Text1" cols="40" rows="5" [(ngModel)]="dummyData.Survey.Question1F" required></textarea>
+
+
+<p>
+  2. Please write a brief (3-4 sentences) evaluation of your teammate. Include what they did well and what they need to work
+  on.
+</p>
+<textarea name="Text2" cols="40" rows="5" [(ngModel)]="dummyData.Survey.Question2" required></textarea>
+
+<p>
+  3. What percentage of the total work do you estimate your teammate did? (Keep in mind that this implies your entire team's
+  percentages should sum to 100%.
+</p>
+<div class="percent">
+  <input name="percentage" type="text" placeholder="Percentage" [(ngModel)]="dummyData.Survey.Question3" required>
+</div>
+
+<br>
+
+<button mat-button [disabled]="!passwordForm.form.valid" type='submit'>Save</button>
+
+</form>
 
 <table class="rubric">
   <tr>
@@ -74,85 +161,3 @@
     <td>Actively incites conflict or deliberately sabotages attempts to resolve conflicts.</td>
   </tr>
 </table>
-
-
-<p>
-  1. Using the Teamwork Rubric, give your teammate a 1-5 score in each of the following categories:
-  <br> a. Meeting Contributions:
-  <input type="radio" id="choice1a" name="choiceA" value="1a">
-  <label for="choice1a">1</label>
-  <input type="radio" id="choice2a" name="choiceA" value="2a">
-  <label for="choice2a">2</label>
-  <input type="radio" id="choice3a" name="choiceA" value="3a">
-  <label for="choice3a">3</label>
-  <input type="radio" id="choice4a" name="choiceA" value="4a">
-  <label for="choice4a">4</label>
-  <input type="radio" id="choice5a" name="choiceA" value="5a">
-  <label for="choice3a">5</label>
-  <br> b. Team Building:
-  <input type="radio" id="choice1b" name="choiceB" value="1b">
-  <label for="choice1b">1</label>
-  <input type="radio" id="choice2b" name="choiceB" value="2b">
-  <label for="choice2b">2</label>
-  <input type="radio" id="choice3b" name="choiceB" value="3b">
-  <label for="choice3b">3</label>
-  <input type="radio" id="choice4b" name="choiceB" value="4b">
-  <label for="choice4b">4</label>
-  <input type="radio" id="choice5b" name="choiceB" value="5b">
-  <label for="choice3b">5</label>
-  <br> c. Work Ethic:
-  <input type="radio" id="choice1c" name="choiceC" value="1c">
-  <label for="choice1c">1</label>
-  <input type="radio" id="choice2c" name="choiceC" value="2c">
-  <label for="choice2c">2</label>
-  <input type="radio" id="choice3c" name="choiceC" value="3c">
-  <label for="choice3c">3</label>
-  <input type="radio" id="choice4c" name="choiceC" value="4c">
-  <label for="choice4c">4</label>
-  <input type="radio" id="choice5c" name="choiceC" value="5c">
-  <label for="choice3c">5</label>
-  <br> d. Fosters Constructions Team Climate:
-  <input type="radio" id="choice1d" name="choiceD" value="1d">
-  <label for="choice1d">1</label>
-  <input type="radio" id="choice2d" name="choiceD" value="2d">
-  <label for="choice2d">2</label>
-  <input type="radio" id="choice3d" name="choiceD" value="3d">
-  <label for="choice3d">3</label>
-  <input type="radio" id="choice4d" name="choiceD" value="4d">
-  <label for="choice4d">4</label>
-  <input type="radio" id="choice5d" name="choiceD" value="5d">
-  <label for="choice5d">5</label>
-  <br> e. Response to Conflict:
-  <input type="radio" id="choice1" name="choiceE" value="1e">
-  <label for="choice1">1</label>
-  <input type="radio" id="choice2" name="choiceE" value="2e">
-  <label for="choice2">2</label>
-  <input type="radio" id="choice3" name="choiceE" value="3e">
-  <label for="choice3">3</label>
-  <input type="radio" id="choice4" name="choiceE" value="4e">
-  <label for="choice4">4</label>
-  <input type="radio" id="choice5" name="choiceE" value="5e">
-  <label for="choice3">5</label>
-  <br> f. If you gave your teammate a score of 1 (lowest score) in any category, please write a brief (2-3 sentence) explanation
-  why. Include specific incidents or examples if possible.
-</p>
-<textarea name="Text1" cols="40" rows="5"></textarea>
-
-
-<p>
-  2. Please write a brief (3-4 sentences) evaluation of your teammate. Include what they did well and what they need to work
-  on.
-</p>
-<textarea name="Text2" cols="40" rows="5"></textarea>
-
-<p>
-  3. What percentage of the total work do you estimate your teammate did? (Keep in mind that this implies your entire team's
-  percentages should sum to 100%.
-</p>
-<div class="percent">
-  <input type="text" placeholder="Percentage">
-</div>
-
-<br>
-
-<button type="button" [routerLink]="['/submit']"> Submit </button>
