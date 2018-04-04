@@ -1,19 +1,29 @@
-<h1>Add a new password</h1>
-<form #passwordForm="ngForm" fxLayout="column" (ngSubmit)="onSubmit()">
-  <mat-input-container>
-    <input matInput required placeholder="First Name" name="firstName" [(ngModel)]="dummyData.FirstName">
-  </mat-input-container>
-  <mat-input-container>
-    <input matInput required placeholder="Last Name" name="lastName" [(ngModel)]="dummyData.LastName">
-  </mat-input-container>
-  <!-- <mat-input-container>
-    <input matInput required placeholder="Password" name="password" [(ngModel)]="formPassword.password">
-  </mat-input-container> -->
-  <br><br>
-  <button mat-button type='button' (click)="clearForm()">Cancel</button>
-  <button mat-button [disabled]="!passwordForm.form.valid" type='submit'>Save</button>
-</form>
+<html lang="en">
+    <head>
+    <meta charset="utf-8">
+    <title>Team Survey Project</title>
+    <div style= "text-align:center">
+        <h>
+     Welcome to The Survey
+     </h>
+     <base href="/">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="stylesheet" type="text/css" href="home.component.css">
+</head>
+<body>
+         <div class= "login-box">
+       <h1>Login Here</h1>
+       <from>
+         <p>Username</p>
+         <input type= "text" name "username" placeholder="Enter Username">
+         <p>Password</p>
+         <input type="text" name="password" placeholder="Enter password">
+         <button type="button">Start</button> 
+         <a href="#">Forget password</a>
+       </from>
 
-<h1>Welcome to Team Evaluations!</h1>
-<button type="button" [routerLink]="['/home']"> Home </button>
-<button type="button" [routerLink]="['/survey']"> Survey </button>
+     </div>
+    </body>
+ </html>   
