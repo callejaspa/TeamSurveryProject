@@ -20,6 +20,7 @@ export class AppComponent {
     this.authStateSubscription = this.afAuth.authState.subscribe((user: firebase.User) => {
       if (user) {
         // Signin just happened
+        console.log("User is signed in as: " + JSON.stringify(user));
         console.log("User is signed in as: " + user.displayName);
         this.showSignOut = true;
         console.log("Sign in finished.");
