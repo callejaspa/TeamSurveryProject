@@ -16,6 +16,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { HomeComponent } from './+home/home.component';
 import { SurveyComponent } from './+survey/survey.component';
 import { SigninComponent } from './+signin/signin.component';
+import { CreateteamComponent } from './+createteam/createteam.component';
 
 import {
   MatAutocompleteModule,
@@ -76,6 +77,7 @@ export const MaterialModules = [
     HomeComponent,
     SurveyComponent,
     SigninComponent,
+    CreateteamComponent,
   ],
   imports: [
     BrowserModule,
