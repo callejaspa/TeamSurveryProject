@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <h1>
   <div class="login-box">
     <h1>Login Here</h1>
@@ -13,3 +14,47 @@
     <a href="#">Forgot password</a>
   </div>
 </h1>
+=======
+<!-- <form #passwordForm="ngForm" fxLayout="column" (ngSubmit)="sendSigninLink()">
+  <mat-card>
+    <mat-card-title>
+      <h2>Create new Account</h2>
+    </mat-card-title>
+    <mat-card-content fxLayout="column" fxLayoutAlign="none center">
+      <mat-input-container>
+        <input matInput required placeholder="Email" name="email" [(ngModel)]="email">
+      </mat-input-container>
+      <button mat-raised-button [disabled]="!passwordForm.form.valid" type='submit'>Send Link</button>
+      <p>Enter your email and click send link to create a new account.</p>
+    </mat-card-content>
+  </mat-card>
+</form> -->
+
+<ng-container *ngIf="user | async; else login">
+
+  <div class="notification is-success">
+    You are now logged in.
+  </div>
+
+</ng-container>
+
+<ng-template #login>
+  <label for="email" class="label">Passwordless Auth</label><br>
+  <input type="email" class="input" [(ngModel)]="email">
+
+  <hr>
+
+  <button class="button is-primary" [disabled]="emailSent" (click)="sendSigninLink(email)">Get Login Link</button>
+
+  <hr>
+
+  <div *ngIf="emailSent" class="notification is-info">
+    Email link sent!
+  </div>
+
+  <div *ngIf="errorMessage" class="notification is-danger">
+    {{ errorMessage }}
+  </div>
+
+</ng-template>
+>>>>>>> master
