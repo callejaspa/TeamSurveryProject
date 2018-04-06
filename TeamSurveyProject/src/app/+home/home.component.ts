@@ -5,8 +5,9 @@ import { DummyData, DummyDto } from '../models/dummyData.model';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.css']
+  styleUrls: ['./home.component.scss']
 })
+
 export class HomeComponent implements OnInit {
   public dummyData: DummyData;
   private dummyCollection: AngularFirestoreCollection<DummyDto>;
