@@ -56,6 +56,10 @@ export class SigninComponent implements OnInit {
       if (this.afAuth.auth.isSignInWithEmailLink(url)) {
         let email = window.localStorage.getItem('emailForSignIn');
 
+        setTimeout((router: Router) => {
+          this.router.navigate(['home']);
+        }, 5000); 
+        
         // If missing email, prompt user for it
         if (!email) {
           email = window.prompt('Please provide your email for confirmation.');
@@ -64,6 +68,10 @@ export class SigninComponent implements OnInit {
         // Signin user and remove the email localStorage
         const result = await this.afAuth.auth.signInWithEmailLink(email, url);
         window.localStorage.removeItem('emailForSignIn');
+
+        setTimeout((router: Router) => {
+          this.router.navigate(['home']);
+        }, 5000);
       }
     } catch (err) {
       this.errorMessage = err.message;

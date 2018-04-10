@@ -1,6 +1,8 @@
 <mat-toolbar>
   <h1>Team Survey</h1>
   <span fxFlex></span>
+  <a mat-button [routerLink]="['/home']"> Home </a>
+  <a mat-button [routerLink]="['/survey']"> Survey </a>
   <button *ngIf="showSignOut" mat-icon-button [matMenuTriggerFor]="signOutMenu">
     <mat-icon>more_vert</mat-icon>
   </button>
