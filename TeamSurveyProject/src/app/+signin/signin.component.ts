@@ -68,10 +68,7 @@ export class SigninComponent implements OnInit {
         // Signin user and remove the email localStorage
         const result = await this.afAuth.auth.signInWithEmailLink(email, url);
         window.localStorage.removeItem('emailForSignIn');
-
-        setTimeout((router: Router) => {
-          this.router.navigate(['home']);
-        }, 5000);
+        
       }
     } catch (err) {
       this.errorMessage = err.message;
