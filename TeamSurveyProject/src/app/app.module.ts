@@ -43,6 +43,7 @@ import {
   MatToolbarModule,
   MatTooltipModule
 } from '@angular/material';
+import { TeamDisplayCardComponent } from './team-display-card/team-display-card.component';
 
 export const MaterialModules = [
   MatAutocompleteModule,
@@ -78,6 +79,7 @@ export const MaterialModules = [
     SurveyComponent,
     SigninComponent,
     CreateteamComponent,
+    TeamDisplayCardComponent,
   ],
   imports: [
     BrowserModule,
