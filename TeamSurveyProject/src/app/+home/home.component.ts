@@ -4,14 +4,8 @@ import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/fires
 import { Subscription } from 'rxjs/Subscription';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
-<<<<<<< HEAD
-import { AngularFireDatabase, FirebaseListObservable } from "angularfire2/database-deprecated";
-import { TeamDto } from '../models/team.model';
-
-=======
 import { Team, TeamDto } from '../models/team.model';
 import { Observable } from 'rxjs/Observable';
->>>>>>> master
 
 @Component({
   selector: 'app-home',
@@ -19,40 +13,18 @@ import { Observable } from 'rxjs/Observable';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-<<<<<<< HEAD
-
-  //teamStream: FirebaseListObservable<Teams[]>
-  //public dummyData: DummyData;
-  private teamCollection: AngularFirestoreCollection<TeamDto>;
-  //private authStateSubscription: Subscription;
-
-=======
   public team: Team;
   private teamCollection: AngularFirestoreCollection<Team>;
   //private authStateSubscription: Subscription;
 
   public teamStream: Observable<Team>;
 
->>>>>>> master
   constructor(private afs: AngularFirestore, private afAuth: AngularFireAuth) {
     this.teamCollection = afs.collection('teams');
     //this.dummyData = new DummyData();
   }
 
   ngOnInit(): void {
-<<<<<<< HEAD
-        var myDoc = this.teamCollection.doc('07BeM6YpbXIvUxfx8THs').collection('members').doc('ZXCVBN123456').ref.get().then(function (doc) {
-          if (doc.exists) {
-            console.log("Document data:", doc.data());
-          } else {
-            console.log("No such document!");
-          }
-        }).catch(function (error) {
-          console.log("Error getting document:", error);
-        });
-
-    //const firebasePath = ``
-=======
     this.teamCollection.doc('team2test').ref.get().then(function (doc) {
       if (doc.exists) {
         var myTeam = doc.data() as Team;
@@ -67,7 +39,6 @@ export class HomeComponent implements OnInit {
 
     
 
->>>>>>> master
     // this.authStateSubscription = this.afAuth.authState.subscribe((user: firebase.User) => {
     //   if (user) {
     //     console.log(user.uid);
