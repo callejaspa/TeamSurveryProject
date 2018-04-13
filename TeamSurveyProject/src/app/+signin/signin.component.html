@@ -1,60 +1,19 @@
-<<<<<<< HEAD
-<!-- <form #passwordForm="ngForm" fxLayout="column" (ngSubmit)="sendSigninLink()">
-  <mat-card>
-    <mat-card-title>
-      <h2>Create new Account</h2>
-    </mat-card-title>
-    <mat-card-content fxLayout="column" fxLayoutAlign="none center">
-      <mat-input-container>
-        <input matInput required placeholder="Email" name="email" [(ngModel)]="email">
-      </mat-input-container>
-      <button mat-raised-button [disabled]="!passwordForm.form.valid" type='submit'>Send Link</button>
-      <p>Enter your email and click send link to create a new account.</p>
-    </mat-card-content>
-  </mat-card>
-</form> -->
 
-<ng-container *ngIf="user | async; else login">
 
-  <div class="notification is-success">
-    You are now logged in.
-  </div>
+<div class="login-box">
+  <h1>Login Here</h1>
+  <p>Username</p>
+  <input type="text" name="username" placeholder="Enter Username">
+  <p>Password</p>
+  <input type="password" name="password" placeholder="Enter password">
+  <div style="text-align:center">
+    <a href="next page"><button type="button">Start</button></a>
+</div>
+<!--<body>
+<<img ng-src="{{\Users\rafro\team-survey-project\TeamSurveyProject\src\IMAGE.JPG}}">
+</body>-->
+<div style="padding:0 0 30px; font-size:27px; font-weight:bold;text-align:center">
+<a href="#">Forgot password</a>
+</div>
+</div>
 
-</ng-container>
-
-<ng-template #login>
-  <label for="email" class="label">Passwordless Auth</label><br>
-  <input type="email" class="input" [(ngModel)]="email">
-
-  <hr>
-
-  <button class="button is-primary" [disabled]="emailSent" (click)="sendSigninLink(email)">Get Login Link</button>
-
-  <hr>
-
-  <div *ngIf="emailSent" class="notification is-info">
-    Email link sent!
-  </div>
-
-  <div *ngIf="errorMessage" class="notification is-danger">
-    {{ errorMessage }}
-  </div>
-
-</ng-template>
-=======
-<h1>
-  <div class="login-box">
-    <h1>Login Here</h1>
-    <p>Username</p>
-    <input type="text" name="username" placeholder="Enter Username" />
-    <p>Password</p>
-    <input type="password" name="password" placeholder="Enter password" />
-    <div style="text-align:center">
-      <a href="next page">
-        <button type="button">Start</button>
-      </a>
-    </div>
-    <a href="#">Forgot password</a>
-  </div>
-</h1>
->>>>>>> 4 changes
