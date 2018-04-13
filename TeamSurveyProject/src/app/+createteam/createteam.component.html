@@ -1,5 +1,24 @@
-<ng-template #estimateTemplate let-lessonsCounter="estimate">
+<!-- <ng-template #estimateTemplate let-lessonsCounter="estimate">
   <div> Approximately {{lessonsCounter}} lessons ...</div>
 </ng-template>
 <ng-container *ngTemplateOutlet="estimateTemplate;context:ctx">
+</ng-container> -->
+
+<h1>Create New Team</h1>
+<form #AddTeamForm="ngForm" fxLayout="column" (ngSubmit)="onSubmit()">
+  <mat-input-container>
+    <input matInput required placeholder="Name" name="Name" [(ngModel)]="team.Name">
+  </mat-input-container>
+  <mat-input-container>
+    <input matInput required placeholder="Course" name="Course" [(ngModel)]="team.Course">
+  </mat-input-container>
+  <mat-input-container>
+      <input matInput required placeholder="Semester" name="Semester" [(ngModel)]="team.Semester">
+    </mat-input-container>
+  <button mat-button type='button' (click)="clearForm()">Clear Form</button>
+  <button mat-button [disabled]="!AddTeamForm.form.valid" type='submit'>Create</button>
+</form>
+
+<ng-container *ngFor="let d of teams; let index=index;">
+  <div class='teamTemplate'>{{ team[index].Name }} {{ team[index].Instructor }}</div>
 </ng-container>
