@@ -1,4 +1,5 @@
 export class Team {
+<<<<<<< HEAD
     Course: string;
     Instructor: string;
     Name: string;
@@ -6,6 +7,15 @@ export class Team {
 
     constructor() {
 
+=======
+    public Name: string;
+    public Instructor: string;
+    public Course: string;
+    public Semester: string;
+
+    constructor() {
+        
+>>>>>>> master
     }
 
     public toDto = (): TeamDto => {
@@ -32,4 +42,8 @@ export interface TeamDto {
     Instructor: string;
     Course: string;
     Semester: string;
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> master

@@ -4,6 +4,7 @@ import { HomeComponent } from './+home/home.component';
 import { SurveyComponent } from './+survey/survey.component';
 import { SigninComponent } from './+signin/signin.component';
 import { CreateteamComponent } from './+createteam/createteam.component';
+import { ModifyteamComponent } from './+modifyteam/modifyteam.component';
 
 const routes: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'home' },
@@ -11,6 +12,7 @@ const routes: Routes = [
   { path: 'survey', component: SurveyComponent },
   { path: 'signin', component: SigninComponent },
   { path: 'createteam', component: CreateteamComponent },
+  { path: 'modifyteam', component: ModifyteamComponent },
   { path: '**', redirectTo: 'home' },
 ];
 

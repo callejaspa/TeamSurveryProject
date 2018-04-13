@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Team, TeamDto } from '../models/team.model';
 
 @Component({
   selector: 'app-createteam',
@@ -6,15 +7,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./createteam.component.scss']
 })
 export class CreateteamComponent implements OnInit {
-  totalEstimate = 10;
-  sumOfEstimate = 20;
-  ctx = {
-    estimate: this.totalEstimate
-  };
+  public team: Team;
 
-  constructor() { }
+  public mockTeam: Team;
 
-  ngOnInit() {
+  public teams: Array<TeamDto> = [];
+
+  constructor() {
+    this.team = new Team();
+    this.mockTeam = new Team();
   }
 
+  ngOnInit() {
+    // this.mockTeam.Name = 'ABC';
+    // this.mockTeam.Instructor = 'Dr. Summet';
+    // this.mockTeam.Course = 'CMS484';
+    // this.mockTeam.Semester = 'Spring';
+    // this.teams.push(this.mockTeam.toDto());
+  }
 }

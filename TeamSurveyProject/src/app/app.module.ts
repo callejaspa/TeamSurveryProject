@@ -17,6 +17,7 @@ import { HomeComponent } from './+home/home.component';
 import { SurveyComponent } from './+survey/survey.component';
 import { SigninComponent } from './+signin/signin.component';
 import { CreateteamComponent } from './+createteam/createteam.component';
+import { ModifyteamComponent } from './+modifyteam/modifyteam.component';
 
 import {
   MatAutocompleteModule,
@@ -79,7 +80,11 @@ export const MaterialModules = [
     SurveyComponent,
     SigninComponent,
     CreateteamComponent,
+<<<<<<< HEAD
     TeamDisplayCardComponent,
+=======
+    ModifyteamComponent,
+>>>>>>> master
   ],
   imports: [
     BrowserModule,
