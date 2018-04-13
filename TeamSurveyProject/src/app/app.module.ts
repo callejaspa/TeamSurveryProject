@@ -17,6 +17,7 @@ import { HomeComponent } from './+home/home.component';
 import { SurveyComponent } from './+survey/survey.component';
 import { SigninComponent } from './+signin/signin.component';
 import { CreateteamComponent } from './+createteam/createteam.component';
+import { ModifyteamComponent } from './+modifyteam/modifyteam.component';
 
 import {
   MatAutocompleteModule,
@@ -43,6 +44,7 @@ import {
   MatToolbarModule,
   MatTooltipModule
 } from '@angular/material';
+import { TeamDisplayCardComponent } from './team-display-card/team-display-card.component';
 
 export const MaterialModules = [
   MatAutocompleteModule,
@@ -78,6 +80,11 @@ export const MaterialModules = [
     SurveyComponent,
     SigninComponent,
     CreateteamComponent,
+<<<<<<< HEAD
+    TeamDisplayCardComponent,
+=======
+    ModifyteamComponent,
+>>>>>>> master
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,38 @@
+<br>
+<h1>Add Team Member</h1>
+<form id='AddTeamMemberForm' #AddTeamMemberForm='ngForm' fxLayout='column' (ngSubmit)='onSubmit()'>
+  <mat-input-container>
+    <input matInput required placeholder='First Name' name='FirstName' [(ngModel)]='teamMember.FirstName'>
+  </mat-input-container>
+  <mat-input-container>
+    <input matInput required placeholder='Last Name' name='LastName' [(ngModel)]='teamMember.LastName'>
+  </mat-input-container>
+  <mat-input-container>
+    <input matInput required placeholder='Email' name='Emai' [(ngModel)]='teamMember.Email'>
+  </mat-input-container>
+  <button mat-button type='button' (click)='clearTeam()'>Clear Team</button>
+  <button mat-button [disabled]='!AddTeamMemberForm.form.valid' type='submit'>Add</button>
+</form>
+
+<ng-container *ngFor='let d of teamMembers; let index=index;'>
+  <mat-card class='teamMemberTemplate' fxLayout='row'>
+    <div fxFlex>
+      <div>{{ teamMembers[index].FirstName }} {{ teamMembers[index].LastName }}</div>
+      <div>{{ teamMembers[index].Email }}</div>
+    </div>
+    <div fxFlex>
+      <button type='button' mat-icon-button matTooltip='Delete Team Member' (click)='removeMember(index)'>
+        <mat-icon>delete</mat-icon>
+      </button>
+    </div>
+    <div fxFlex>
+        <button type='button' mat-icon-button matTooltip='Send Email Link' (click)='sendSigninLink(teamMembers[index].Email)'>
+          <mat-icon>email</mat-icon>
+        </button>
+      </div>
+  </mat-card>
+</ng-container>
+
+<ng-container *ngIf='teamMembers.length > 1'>
+  <button mat-button type='button' (click)='sendAllLink()'>Send Links to all</button>
+</ng-container>

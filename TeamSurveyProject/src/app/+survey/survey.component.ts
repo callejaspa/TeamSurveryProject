@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { AngularFirestoreCollection, AngularFirestore } from 'angularfire2/firestore';
-import { DummyData, DummyDto } from '../models/dummyData.model';
 import { Subscription } from 'rxjs/Subscription';
 import { AngularFireAuth } from 'angularfire2/auth';
 import * as firebase from 'firebase/app';
 import { Survey } from '../models/Survey.model';
+import { DummyDto, DummyData } from '../models/dummyData.model';
 
 @Component({
   selector: 'app-survey',
