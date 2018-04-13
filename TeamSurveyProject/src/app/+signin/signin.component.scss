@@ -1,35 +1,17 @@
-body{
-    margin: 0;
-    padding: 0;
-    background-size:cover;
-    background-position: center;
-    font-family: sans-serif;
+.loginBoxContainer {
+    text-align: center;
+    margin-top: 20px;
 }
 
 .login-box{
+    margin: auto;
+    text-align: center;
     width: 320px;
     height: 420px;
     background: rgba(0, 0, 0, 0.5);
     color:#fff;
-    top: 55%;
-    left: 50%;
-    position: absolute;
-    transform: translate(-50%, -50%);
     box-sizing: border-box;
     padding: 70px 30px;
-}
-a{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
-    font-weight: bold;
-}
-h1{
-    margin: 0;
-    padding: 0 0 20px;
-    text-align: center;
-    font-size: 22px;
 }
 .login-box p{
     margin: 0;
@@ -39,9 +21,6 @@ h1{
 .login-box input{
     width: 100%;
     margin-bottom: 20px;
-
-}
-.login-box input[type= "text"], input[type="password"]{
     border:none;
     border-bottom: 1px solid #fff;
     background: transparent;
@@ -50,6 +29,7 @@ h1{
     color: #fff;
     font-size: 16px;
 }
+
 .login-box a{
     text-decoration: none;
     font-size: 14px;
