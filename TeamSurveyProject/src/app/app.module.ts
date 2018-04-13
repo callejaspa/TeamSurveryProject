@@ -80,11 +80,8 @@ export const MaterialModules = [
     SurveyComponent,
     SigninComponent,
     CreateteamComponent,
-<<<<<<< HEAD
     TeamDisplayCardComponent,
-=======
     ModifyteamComponent,
->>>>>>> master
   ],
   imports: [
     BrowserModule,
