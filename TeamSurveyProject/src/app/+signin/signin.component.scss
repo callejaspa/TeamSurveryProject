@@ -1,32 +1,29 @@
-.body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
+
+img{
+    background: center;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
     width: 100%;
-}
-.Intro{
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    background-size: cover;
-    background-position: center;
-    font-family: sans-serif;
+    height: 100;
+    z-index: -1;
 }
 
 .login-box{
-    width: 370px;
-    height: 450px;
+    width:350px;
+    height: 400px;
     background: rgba(0, 0, 0, 0.5);
-    color:#fff;
+    color: #fff;
     top:50%;
-    left:50%;
+    left: 20%;
     position: absolute;
-    transform: translate(-50%, -50%);
+    transform: translate(50%, 50%);
     box-sizing: border-box;
     padding: 70px 30px;
     
 }
- h1{
+h1{
     margin: 0;
     padding:0 0 20px;
     font-size: 22px;
