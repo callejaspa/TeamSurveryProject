@@ -1,3 +1,5 @@
+import { Survey } from "./Survey.model";
+
 export class Team {
     public Name: string;
     public Instructor: string;
@@ -6,6 +8,8 @@ export class Team {
 
     public SurveysTotal: number;
     public SurveysComplete: number;
+
+    public Surveys: Array<Survey>
 
     constructor() {
         
@@ -18,7 +22,8 @@ export class Team {
             Course: this.Course,
             Semester: this.Semester,
             SurveysTotal: this.SurveysTotal,
-            SurveysComplete: this.SurveysComplete
+            SurveysComplete: this.SurveysComplete,
+            Surveys: this.Surveys
         };
         console.log(dtoObject);
         return dtoObject;
@@ -31,6 +36,7 @@ export class Team {
         this.Semester = undefined;
         this.SurveysTotal = undefined;
         this.SurveysComplete = undefined;
+        this.Surveys = undefined;
     }
 }
 
@@ -41,4 +47,5 @@ export interface TeamDto {
     Semester: string;
     SurveysTotal: number;
     SurveysComplete: number;
+    Surveys: Array<Survey>
 }

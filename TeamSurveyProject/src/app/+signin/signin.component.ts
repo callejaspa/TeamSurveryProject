@@ -20,18 +20,12 @@ export class SigninComponent implements OnInit {
   constructor(public afAuth: AngularFireAuth, private router: Router) { }
 
   ngOnInit() {
-    this.user = this.afAuth.authState;
-
-    const url = this.router.url;
-
-    if (url.includes('signin')) {
-      this.confirmSignIn(url);
-    }
+    
   }
 
   async sendSigninLink() {
     const actionCodeSettings = {
-      url: 'http://localhost:4200/signin',
+      url: 'http://localhost:4200/home?userCode=ZXCVBN123456',
       handleCodeInApp: true
     };
     try {
@@ -49,29 +43,5 @@ export class SigninComponent implements OnInit {
     // this.afAuth.auth.signInWithPopup(new firebase.auth.GoogleAuthProvider()).then(() => {
     //   this.router.navigate(['/']);
     // });
-  }
-
-  async confirmSignIn(url) {
-    try {
-      if (this.afAuth.auth.isSignInWithEmailLink(url)) {
-        let email = window.localStorage.getItem('emailForSignIn');
-
-        setTimeout((router: Router) => {
-          this.router.navigate(['home']);
-        }, 5000); 
-        
-        // If missing email, prompt user for it
-        if (!email) {
-          email = window.prompt('Please provide your email for confirmation.');
-        }
-
-        // Signin user and remove the email localStorage
-        const result = await this.afAuth.auth.signInWithEmailLink(email, url);
-        window.localStorage.removeItem('emailForSignIn');
-        
-      }
-    } catch (err) {
-      this.errorMessage = err.message;
-    }
   }
 }
