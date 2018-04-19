@@ -8,7 +8,7 @@
     <input matInput required placeholder='Last Name' name='LastName' [(ngModel)]='teamMember.LastName'>
   </mat-input-container>
   <mat-input-container>
-    <input matInput required placeholder='Email' name='Emai' [(ngModel)]='teamMember.Email'>
+    <input matInput required placeholder='Email' name='Email' [(ngModel)]='teamMember.Email'>
   </mat-input-container>
   <button mat-button type='button' (click)='clearTeam()'>Clear Team</button>
   <button mat-button [disabled]='!AddTeamMemberForm.form.valid' type='submit'>Add</button>
