@@ -22,8 +22,10 @@
 <ng-container *ngFor='let d of teams; let index=index;'>
   <mat-card class='teamTemplate' fxLayout='row'>
     <div fxFlex>
-      <div>{{ teams[index].Name }} {{ teams[index].Course }}</div>
+      <div>{{ teams[index].Name }}</div>
+      <div>{{ teams[index].Course }}</div>
       <div>{{ teams[index].Semester }}</div>
+      <div>Completed {{ teams[index].SurveysComplete }} of {{ teams[index].SurveysTotal }}</div>
     </div>
   </mat-card>
 </ng-container>

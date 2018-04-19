@@ -35,7 +35,7 @@ export class CreateteamComponent implements OnInit {
         doc.ref.collection('members').doc('ZXCVBN123456').get().then(function (memberDoc) {
           if (memberDoc.exists) {
             var totalSurveys = memberDoc.data().Surveys.length;
-            console.log(totalSurveys);
+            console.log('Total ', totalSurveys);
             var completeSurveys = 0;
             memberDoc.data().Surveys.forEach(element => {
               console.log(element);
@@ -43,9 +43,11 @@ export class CreateteamComponent implements OnInit {
                 completeSurveys++;
               }
             });
-            console.log(completeSurveys);
+            console.log('Complete ', completeSurveys);
             console.log(memberDoc.data().Surveys[0].For);
             var currentTeam = doc.data() as Team;
+            currentTeam.SurveysTotal = totalSurveys;
+            currentTeam.SurveysComplete = completeSurveys;
             teamsRef.push(currentTeam);
           }
         });
