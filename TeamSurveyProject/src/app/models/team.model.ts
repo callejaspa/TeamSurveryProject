@@ -1,4 +1,5 @@
 export class Team {
+  doc: any;
     public Name: string;
     public Instructor: string;
     public Course: string;
