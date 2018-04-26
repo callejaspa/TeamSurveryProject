@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import * as firebase from 'firebase/app';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-signin',
-  templateUrl: './signin.component.html',
-  styleUrls: ['./signin.component.scss']
+  selector: 'app-login',
+  templateUrl: './login.component.html',
+  styleUrls: ['./login.component.scss']
 })
-export class SigninComponent implements OnInit {
+export class LoginComponent implements OnInit {
   user;
   email: string;
   emailSent = false;
@@ -28,11 +27,7 @@ export class SigninComponent implements OnInit {
   private async confirmSignIn(url) {
     try {
       if (this.afAuth.auth.isSignInWithEmailLink(url)) {
-        let email = window.localStorage.getItem('emailForSignIn');
-
-        setTimeout((router: Router) => {
-          this.router.navigate(['createteam']);
-        }, 5000); 
+        let email = window.localStorage.getItem('emailForSignIn'); 
         
         // If missing email, prompt user for it
         if (!email) {

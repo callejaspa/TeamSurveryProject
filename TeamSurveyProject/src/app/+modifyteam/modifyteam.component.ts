@@ -19,9 +19,17 @@ export class ModifyteamComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.mockMember.FirstName = 'Ronova';
+    this.mockMember.LastName = 'Afroz';
+    this.mockMember.Email = 'rafroz@rollins.edu';
+    this.teamMembers.push(this.mockMember.toDto());
     this.mockMember.FirstName = 'Ben';
     this.mockMember.LastName = 'Blood';
     this.mockMember.Email = 'benlblood@gmail.com';
+    this.teamMembers.push(this.mockMember.toDto());
+    this.mockMember.FirstName = 'Pauline';
+    this.mockMember.LastName = 'Callejas';
+    this.mockMember.Email = 'pcallejas@rollins.edu';
     this.teamMembers.push(this.mockMember.toDto());
   }
 
@@ -36,7 +44,7 @@ export class ModifyteamComponent implements OnInit {
 
   async sendSigninLink(email) {
     const actionCodeSettings = {
-      url: 'http://localhost:4200/signin',
+      url: 'http://localhost:4200/home?userCode=ZXCVBN123456',
       handleCodeInApp: true
     };
     try {

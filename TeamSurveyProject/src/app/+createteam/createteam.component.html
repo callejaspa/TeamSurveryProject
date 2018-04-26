@@ -25,7 +25,9 @@
       <div>{{ teams[index].Name }}</div>
       <div>{{ teams[index].Course }}</div>
       <div>{{ teams[index].Semester }}</div>
-      <!-- <div>Completed {{ teams[index].SurveysComplete }} of {{ teams[index].SurveysTotal }}</div> -->
+      <div>
+        <button mat-button type="button" [routerLink]="['/modifyteam']"> Modify </button>
+      </div>
     </div>
   </mat-card>
 </ng-container>

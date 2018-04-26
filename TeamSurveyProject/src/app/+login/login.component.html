@@ -1,0 +1,29 @@
+<ng-container *ngIf="user | async; else login">
+
+    <div class="notification is-success">
+      You are now logged in. Redirecting to home page...
+    </div>
+  
+  </ng-container>
+  
+  <ng-template #login>
+    <div style="display: inline-block; width: 50%;">
+      <label for="email" class="label">Create Instructor Account</label>
+      <br>
+      <input type="email" class="input" [(ngModel)]="email">
+  
+      <hr>
+  
+      <button class="button is-primary" [disabled]="emailSent" (click)="sendSigninLink(email)">Get Login Link</button>
+  
+      <hr>
+  
+      <div *ngIf="emailSent" class="notification is-info">
+        Email link sent!
+      </div>
+  
+      <div *ngIf="errorMessage" class="notification is-danger">
+        {{ errorMessage }}
+      </div>
+    </div>
+  </ng-template>

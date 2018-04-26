@@ -15,6 +15,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HomeComponent } from './+home/home.component';
 import { SurveyComponent } from './+survey/survey.component';
+import { LoginComponent } from './+login/login.component';
 import { SigninComponent } from './+signin/signin.component';
 import { CreateteamComponent } from './+createteam/createteam.component';
 import { ModifyteamComponent } from './+modifyteam/modifyteam.component';
@@ -82,6 +83,7 @@ export const MaterialModules = [
     CreateteamComponent,
     TeamDisplayCardComponent,
     ModifyteamComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,

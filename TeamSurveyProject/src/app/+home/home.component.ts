@@ -8,7 +8,6 @@ import { Team, TeamDto } from '../models/team.model';
 import { Observable } from 'rxjs/Observable';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 import { Survey } from '../models/Survey.model';
-import { SurveyDataService } from '../survey-data.service';
 
 @Component({
   selector: 'app-home',
@@ -23,8 +22,7 @@ export class HomeComponent implements OnInit {
   public surveys: Array<Survey>
 
   constructor(private afAuth: AngularFireAuth, private afs: AngularFirestore, 
-    private activatedRoute: ActivatedRoute, private router: Router,
-    private data: SurveyDataService) {
+    private activatedRoute: ActivatedRoute, private router: Router) {
     this.teamCollection = afs.collection('teams');
     this.team = new Team();
     this.teams = new Array<Team>();
