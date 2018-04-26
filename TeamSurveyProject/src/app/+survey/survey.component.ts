@@ -27,15 +27,14 @@ export class SurveyComponent implements OnInit {
         console.log(user.uid);
         this.dummyData.$key = user.uid;
         this.dummyCollection.doc(this.dummyData.$key).set({ Name: user.displayName, Email: user.email }, { merge: true } );
-      }
-      else {
+      } else {
         this.dummyData.clear();
       }
-    })
+    });
   }
 
   onSubmit(): void {
-    console.log(this.dummyData.Survey.Question3);
+    //console.log(this.dummyData.Survey.Question3);
     this.dummyCollection.doc(this.dummyData.$key).collection('surveys').add(this.dummyData.toDto());
     //this.dummyCollection.doc(this.dummyData.$key).set(this.dummyData.toDto(), { merge: true } );
     //this.dummyCollection.add(this.dummyData.toDto());
